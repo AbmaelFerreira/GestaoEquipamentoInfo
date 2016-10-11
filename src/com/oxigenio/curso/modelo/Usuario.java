@@ -1,5 +1,79 @@
 package com.oxigenio.curso.modelo;
 
+import javax.faces.bean.ViewScoped;
+
+@ViewScoped
 public class Usuario {
+	
+	private int id;
+	private String descricao;
+	
+	private String login;
+	private String senha;
+	private int permissao;
+	private int unidade;
+	private int setor;
+	
+	
+	
+	
+	public boolean isLogado()
+	{
+		return login != null;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public int getPermissao() {
+		return permissao;
+	}
+	public void setPermissao(int nivel) {
+		this.permissao = nivel;
+	}
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+
+	public int getUnidade() {
+		return unidade;
+	}
+
+
+	public void setUnidade(int unidade) {
+		this.unidade = unidade;
+	}
+
+
+	public int getSetor() {
+		return setor;
+	}
+
+
+	public void setSetor(int setor) {
+		this.setor = setor;
+	}
+	
+		
 
 }

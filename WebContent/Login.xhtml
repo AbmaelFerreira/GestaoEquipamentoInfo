@@ -7,42 +7,34 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets">
 	 
 <h:head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			<title>Login</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<h:outputStylesheet  library="css" name="/estilo.css"/>
+	<title>Login</title>
 	
 </h:head>
 
-	<h:body>
-	
-	<h:form id="frm">
-	
-	<h:panelGrid columns="2">
-			<f:facet name="head">Acessoa ao Sistema</f:facet>
-				<h:outputLabel value="Usuário"/>
-				<h:inputText value="Usuário"/>
-				
-				<h:outputLabel value="Senha"/>
-				<h:inputSecret value="Senha"/>
-				
-				<h:outputLabel value="Email"/>
-				<h:inputSecret value="email"/>
-				
-				
-				
-				<h:selectBooleanCheckbox value=""/>
-				
-					Lembrar-me
-				
-				<h:outputLabel value=""/>
-				
-				<h:commandButton value="Enviar"/>
-				<h:commandButton value="Limpar"/>
-					
-					
-		</h:panelGrid>
-
+<h:body>
+		 <div id="login-dialog">
+		 	<h1 align="center">Acesso</h1>
+					  <h:form  id="frm">		
+					  
+							<h:panelGrid columns="2" styleClass="grid-login" > 
+							  <h:outputLabel  value="Login" for="usuario"/>
+							  <h:inputText  id="usuario"  size="40" value="#{usuarioBeam.nomeUsuario}"/>
+							  
+							  <h:outputLabel  value="Senha" for="senha"/>		
+							  <h:inputSecret id="senha" size="40" value="#{usuarioBeam.senha}"/>
+							  <h:outputLabel  />
+							  <h:commandButton value="Acessar" action="#{usuarioBeam.Acessologin}"/>
+							</h:panelGrid> 	
+					</h:form>
+		 </div>
 		
-	</h:form>		
-	
-	</h:body>
+		 <div  class="footer">
+		 
+		 <p>Copyright 2003 - 2016 NextIp | Todos os Direitos Reservados</p>
+		 
+		 </div><!-- Fim do rodape -->
+
+</h:body>
 </html>

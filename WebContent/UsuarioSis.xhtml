@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Cadastro de Usuário</title>
+	</h:head>
+	<h:body>
+		<h:form id="frm">
+			
+			<h:panelGrid columns="2">
+				<f:facet name="header">
+					Cadastro de novo Usuário do sistema
+				</f:facet>
+				
+				<h:outputLabel value="Código:"/>
+				<h:outputLabel value="0001"/>
+				
+				<h:outputLabel value="Nome completo:"/>
+				<h:panelGroup>
+					<h:inputText size="50"/>
+					
+				</h:panelGroup>
+				
+				<h:outputLabel value="Login:"/>
+				<h:inputText size="50"/>
+				
+				<h:outputLabel value="Senha:"/>
+				<h:inputSecret size="50"/>
+				
+				<h:outputLabel value="Pemissões:"/>
+				<h:selectOneMenu>
+					<f:selectItem itemValue="Total"/>
+					<f:selectItem itemValue="Parcial"/>
+					<f:selectItem itemValue="Nada"/>
+				</h:selectOneMenu>
+				
+				<h:outputLabel value="Unidade de Negócio"/>
+				<h:selectOneMenu>
+					<f:selectItem itemValue="Matriz"/>
+					<f:selectItem itemValue="Multimaster"/>
+					<f:selectItem itemValue="Multitintas"/>
+				</h:selectOneMenu>
+				
+				<h:outputLabel value="Setor"/>
+				<h:selectOneMenu>
+					<f:selectItem itemValue="Administração"/>
+					<f:selectItem itemValue="Tecnologi a da Informação"/>
+					<f:selectItem itemValue="Financeiro"/>
+				</h:selectOneMenu>
+				
+				
+				<h:commandButton value="Cadastrar"/>
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</html>

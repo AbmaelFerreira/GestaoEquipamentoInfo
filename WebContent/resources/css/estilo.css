@@ -1,0 +1,121 @@
+@CHARSET "ISO-8859-1";
+
+#corpo
+{
+	float: left;	
+}
+.header{
+	height:2px;
+	background-color:#f87323; 	
+	color: black;
+	font-family: Arial;	
+	text-align: center;
+	padding: 50px;
+	margin-bottom: 10px;
+}
+
+#login-dialog
+{
+	width: 260px;
+	margin:  auto;
+	margin-top: 150px;
+	font-family:Verdana;
+}
+
+.grid-login
+{
+	background-color:#f87323;
+	border-radius:8px;
+	padding: 50px;
+	width: 100%;
+	margin-bottom: 50px;
+		
+}
+
+#monitoramento
+{
+	float:left;
+	padding: 50px;
+	
+}
+#monitoramento p
+{
+	color: red;
+	font-size: 100px;
+	
+}
+
+.footer
+{
+	height:200px;
+	background-color:#f87323; 	
+	color: black;
+	font-family: Arial;	
+	text-align: center;
+	padding: 50px;
+	margin-top:50px;
+	margin-bottom: 0;
+	
+	
+
+}
+
+ ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    }
+    
+ul li {
+    position: relative;
+    }
+    
+li ul 
+{
+    position: absolute;
+    left: 149px;
+    top: 0;
+    display: none;
+}
+    
+   ul li a {
+    display: block;
+    text-decoration: none;
+    color: #f87323;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc; 
+}
+
+li:hover ul { display:block; }
+li:hover ul li ul { display:none; }
+
+ul li a:hover
+{
+	display:block;
+    text-decoration:underline;
+    font-weight: bold;
+    background: #ccc; 
+ }
+    
+ li ul li:hover ul{display:block; }
+
+    
+
+
+
+/* Fix IE. Hide from IE Mac \*/
+* html ul li { float: left; }
+* html ul li a { height: 1%; }
+/* End */
+
+#clear
+{clear: both;}
+
+
+
+
+	
+
+	
