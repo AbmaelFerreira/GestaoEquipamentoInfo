@@ -1,13 +1,20 @@
 package com.oxigenio.curso.modelo;
 
 import javax.faces.bean.ViewScoped;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 
 @ViewScoped
+@Entity
 public class Usuario {
 	
+	@Id
 	private int id;
 	private String descricao;
-	
 	private String login;
 	private String senha;
 	private int permissao;
