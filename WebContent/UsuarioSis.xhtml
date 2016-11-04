@@ -7,8 +7,13 @@
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Cadastro de Usuário</title>
+		<h:outputStylesheet  library="css" name="/estilo.css"/>
 	</h:head>
 	<h:body>
+	<div  class="header">
+		 			
+		 
+ </div><!-- Fim do head-->
 		<h:form id="frm">
 			
 			<h:panelGrid columns="2">
@@ -53,9 +58,15 @@
 				</h:selectOneMenu>
 				
 				
-				<h:commandButton value="Cadastrar" action="#{usuarioBeam.cadastrar}""/>
-				<h:commandButton value="Voltar" action=""/>
+				<h:commandButton value="Cadastrar" />
+				<h:commandButton value="Voltar" />
 			</h:panelGrid>
 		</h:form>
+		<div  class="footer">
+
+		 
+		 			<p>Copyright  2016 Bima Software  | Todos os Direitos Reservados</p>
+		 
+		 		</div><!-- Fim do rodape -->
 	</h:body>
 </html>
