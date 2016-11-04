@@ -8,29 +8,45 @@ import com.oxigenio.curso.modelo.Usuario;
 @ViewScoped
 @ManagedBean
 public class UsuarioBeam {
-	
-	
+		
 	private Usuario usuario;
-	
 	private String nomeUsuario;
 	private String senha;
 	
+	//METODO  PARA ACESSAR O SISTEMA
 	public String Acessologin()
 	{
-	
-	
-	
-			if("admin".equals(this.nomeUsuario) && "123".equals(this.senha))
-			{
-				
-				return "/index";
-				
-			}else
-			{
-				
-			}
-			return null;
+	 if("admin".equals(this.nomeUsuario) && "123".equals(this.senha))
+	 {				
+	  return "/index";
+		}else
+		{
+		}
+		return null;
 	}
+	
+	//METODO PARA CADASTRAR
+	
+	public void cadastrar()
+	{
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//-----------------gets e sets----------------------------------
 
 	public Usuario getUsuario() {
 		return usuario;
