@@ -14,7 +14,7 @@ public class Usuario {
 	
 	@Id
 	private int id;
-	private String descricao;
+	private String nome;
 	private String login;
 	private String senha;
 	private int permissao;
@@ -36,11 +36,11 @@ public class Usuario {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getDescricao() {
-		return descricao;
+	public String getNome() {
+		return nome;
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setNome(String descricao) {
+		this.nome = descricao;
 	}
 	public int getPermissao() {
 		return permissao;

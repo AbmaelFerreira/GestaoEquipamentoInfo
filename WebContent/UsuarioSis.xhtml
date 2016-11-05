@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Cadastro de Usuário</title>
@@ -16,51 +17,63 @@
  </div><!-- Fim do head-->
 		<h:form id="frm">
 			
-			<h:panelGrid columns="2">
+			<p:panelGrid columns="2">
 				<f:facet name="header">
-					Cadastro de novo Usuário do sistema
+				<p><font size="25">Cadastro de novo Usuário do sistema</font></p>
 				</f:facet>
 				
-				<h:outputLabel value="Código:"/>
-				<h:outputLabel value="0001"/>
+				<p:outputLabel value="Código:"/>
+				<p:inputText value="#{usuarioBeam.usuario.id}"/>
 				
-				<h:outputLabel value="Nome completo:"/>
+				<p:outputLabel value="Nome completo:"/>
 				<h:panelGroup>
-					<h:inputText size="50"/>
+					<p:inputText size="50" value="#{usuarioBeam.usuario.nome}"/>
 					
 				</h:panelGroup>
 				
-				<h:outputLabel value="Login:"/>
-				<h:inputText size="50"/>
+				<p:outputLabel value="Login:"/>
+				<p:inputText size="50" value="#{usuarioBeam.usuario.login}"/>
 				
-				<h:outputLabel value="Senha:"/>
-				<h:inputSecret size="50"/>
+				<p:outputLabel value="Senha:"/>
+				<p:password size="50" value="#{usuarioBeam.usuario.senha}"/>
 				
-				<h:outputLabel value="Pemissões:"/>
-				<h:selectOneMenu>
-					<f:selectItem itemValue="Total"/>
-					<f:selectItem itemValue="Parcial"/>
-					<f:selectItem itemValue="Nada"/>
-				</h:selectOneMenu>
+				<p:outputLabel value="Pemissões:"/>
+				<p:selectOneMenu value="#{usuarioBeam.usuario.permissao}">
+					<f:selectItem itemValue="Total" itemLabel="Total"/>
+					<f:selectItem itemValue="Parcial" itemLabel="Parcial"/>
+					<f:selectItem itemValue="Nada" itemLabel="Nada"/>
+				</p:selectOneMenu>
 				
-				<h:outputLabel value="Unidade de Negócio"/>
-				<h:selectOneMenu>
-					<f:selectItem itemValue="Matriz"/>
-					<f:selectItem itemValue="Multimaster"/>
-					<f:selectItem itemValue="Multitintas"/>
-				</h:selectOneMenu>
+				<p:outputLabel value="Unidade de Negócio"/>
+				<p:selectOneMenu value="#{usuarioBeam.usuario.unidade}">
+					<f:selectItem itemValue="001-Matriz" itemLabel="001-Matriz"/>
+					<f:selectItem itemValue="002-Multitintas" itemLabel="002-Multitintas"/>
+					<f:selectItem itemValue="003-Multipar" itemLabel="003-Multipar"/>
+					<f:selectItem itemValue="004-Multimaster" itemLabel="004-Multimaster"/>
+					<f:selectItem itemValue="005-Multicores" itemLabel="005-Multicores"/>
+					<f:selectItem itemValue="006-Multicenter" itemLabel="006-Multicenter"/>
+					<f:selectItem itemValue="007-Motta Parafusos" itemLabel="007-Motta Parafusos"/>
+					<f:selectItem itemValue="008-Maqfer" itemLabel="008-Maqfer"/>
+					<f:selectItem itemValue="009-Multifix" itemLabel="009-Multifix"/>
+					<f:selectItem itemValue="010-Oxirondon" itemLabel="010-Oxirondon"/>
+					<f:selectItem itemValue="011-Maxtintas" itemLabel="011-Maxtintas"/>
+					<f:selectItem itemValue="013-Mundial Parafusos" itemLabel="013-Mundial Parafusos"/>
+					<f:selectItem itemValue="014-Primatintas" itemLabel="014-Primatintas"/>
+					<f:selectItem itemValue="016-Rainha das Tintas" itemLabel="016-Rainha das Tintas"/>
+					
+				</p:selectOneMenu>
 				
-				<h:outputLabel value="Setor"/>
-				<h:selectOneMenu>
-					<f:selectItem itemValue="Administração"/>
-					<f:selectItem itemValue="Tecnologi a da Informação"/>
-					<f:selectItem itemValue="Financeiro"/>
-				</h:selectOneMenu>
+				<p:outputLabel value="Setor"/>
+				<p:selectOneMenu value="#{usuarioBeam.usuario.setor}">
+					<f:selectItem itemValue="Administração" itemLabel="Administração"/>
+					<f:selectItem itemValue="Tecnologi a da Informação" itemLabel="Tecnologia da Informação"/>
+					<f:selectItem itemValue="Financeiro" itemLabel="Financeiro"/>
+				</p:selectOneMenu>
 				
 				
-				<h:commandButton value="Cadastrar" />
-				<h:commandButton value="Voltar" />
-			</h:panelGrid>
+				<p:commandButton value="Cadastrar"  />
+				<p:commandButton value="Voltar" />
+			</p:panelGrid>
 		</h:form>
 		<div  class="footer">
 

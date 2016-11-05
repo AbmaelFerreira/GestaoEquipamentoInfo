@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:ui="http://java.sun.com/jsf/facelets">
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
 	 
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -22,15 +23,19 @@
 		 	<h1 align="center">Acesso</h1>
 					  <h:form  id="frm">		
 					  
-							<h:panelGrid columns="2" styleClass="grid-login" > 
-							  <h:outputLabel  value="Login" for="usuario"/>
-							  <h:inputText  id="usuario"  size="40" value="#{usuarioBeam.nomeUsuario}"/>
+							<p:panelGrid columns="2" styleClass="grid-login"> 
+							  <p:outputLabel  value="Login" for="usuario"/>
+							  <p:inputText  id="usuario"  size="25" value="#{usuarioBeam.nomeUsuario}"/>
 							  
-							  <h:outputLabel  value="Senha" for="senha"/>		
-							  <h:inputSecret id="senha" size="40" value="#{usuarioBeam.senha}"/>
-							  <h:outputLabel  />
-							  <h:commandButton value="Acessar" action="#{usuarioBeam.Acessologin}"/>
-							</h:panelGrid> 	
+							  <p:outputLabel  value="Senha" for="senha"/>		
+							  <p:password id="senha" size="25" value="#{usuarioBeam.senha}"/>
+							  <p:outputLabel  />
+							  
+							  
+							  <p:button  value="Acessar" action="#{usuarioBeam.Acessologin}"/>
+    							
+							  
+							</p:panelGrid> 	
 					</h:form>
 		 </div>
 		
